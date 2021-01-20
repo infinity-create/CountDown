@@ -1,0 +1,206 @@
+
+/* CSS FILE for cmpt281_webpage */
+body {
+    background-color: rgb(21, 105, 84);
+    font-size: 100%;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+    animation-name: body_anim;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes body_anim {
+    0%   {background-color: rgb(21, 105, 84)}
+    50%  {background-color: grey;}
+    75%  {background-color: rgb(5, 53, 31);}
+    100% {background-color:  rgb(19, 40, 68);}
+}
+
+h1 {
+    text-align: center ;
+    font-size: 5em;
+    color: rgb(132, 228, 245);
+    animation-name: Header_text;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes Header_text {
+    0%   {color: rgb(132, 228, 245);}
+    50%  {color: rgb(132, 228, 245);}
+    75%  {color:rgb(184, 210, 214);}
+    100% {color:  rgb(132, 228, 245);}
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(195, 245, 242);
+    font-family: "Georgia", Courier, monospace;
+}
+
+table {
+    border: 1px solid whitesmoke;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+th {
+    border: 1px solid rgb(116, 155, 77);
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+    background-color: rgb(116, 155, 77);
+    color: rgb(10, 20, 63);
+}
+
+td {
+    height: 150px;
+    border: 1px solid  rgb(49, 146, 125)k;
+    text-align: center;
+    font-size: 50px;
+    background-color: rgb(49, 146, 125);
+    color: gold;
+}
+
+.showTime {
+    float: left;
+    column-count: 4;
+    column-gap: 10px;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    position: absolute;
+    text-align: right;
+    bottom: 0px;
+    right: 5px;
+}
+
+.clickables {
+    
+    display: flex;
+    flex-direction: row;
+    widows: 100px;
+    margin-right: 20%;
+    margin-left: 20%;
+    justify-content: space-between;
+    color: cadetblue;
+}
+#advice:hover, #prompt:hover { 
+    color: rgb(195, 245, 242);
+    text-decoration: unset;
+    cursor: default;
+}
+
+#prompt, #advice {
+    text-decoration: underline;
+}
+
+/* ANIMATION BITS */
+#finished {
+    font-size: 20px;
+    animation-name: text;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes text {
+    0%   {color: rgb(0, 174, 255);}
+    25%  {color: rgb(92, 8, 47);}
+    50%  {color:plum;}
+    75%  {color: rgb(255, 251, 0);}
+    100% {color: greenyellow;}
+}
+
+.anim_block {
+    float: left;
+    height: 1000PX;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 0px;
+    /* bottom: 0px;   */
+}
+
+.squares1, .squares4, .squares7, .squares10, .squares13, .squares16 {
+    position: relative;
+    background-color: cadetblue;
+    z-index: -1;
+    left: 1px;
+    width: 10%;
+    height: 10%;
+    animation-name: up_movement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.squares2, .squares5, .squares8, .squares11, .squares14{
+    position: relative;
+    z-index: -1;
+    background-color:cadetblue;
+    left: 0px;
+    width: 10%;
+    height: 10%;
+    animation-name: down_movement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.squares3, .squares6, .squares9, .squares12, .squares15 {
+    position: relative;
+    z-index: -1;
+    background-color:cadetblue;
+    left: 0px;
+    width: 10%;
+    height: 10%;
+    animation-name: upper_movement;
+    animation-delay: 3.6s;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.squares3, .squares12 {
+    opacity: 75%;
+}
+
+.squares4, .squares10, .squares11 {
+    opacity: 50%;
+}
+
+.squares5, .squares6, .squares7, .squares8, .squares9 {
+    opacity: 20%;
+}
+
+
+@keyframes up_movement {
+    from {background-color:plum; bottom:0px;}
+    to  {background-color: cadetblue; bottom:70%;}
+
+}
+
+@keyframes upper_movement {
+    from {background-color:  olive; bottom:0%;}
+    to  {background-color: cadetblue; bottom:60%;}
+
+}
+
+@keyframes down_movement {
+    from {background-color: cyan; bottom: 70%;}
+    to  {background-color:cadetblue; bottom:0%}
+}
